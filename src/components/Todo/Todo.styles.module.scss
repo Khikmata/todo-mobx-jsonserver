@@ -1,0 +1,66 @@
+.todo {
+	margin: 0 auto;
+
+	width: clamp(300px, 100%, 900px);
+	padding: 12px 24px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	border-radius: 4px;
+	background-color: #282d2e;
+	color: white;
+
+	transition: all 0.3s ease-in-out;
+	&.active {
+		background-color: #c4c4c4;
+		p {
+			color: #282d2e;
+			text-decoration: line-through;
+		}
+		.todo-buttons__btn {
+			background-color: #282d2e;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 12px;
+	}
+	p {
+		width: clamp(100px, 50%, 600px);
+		overflow: hidden;
+	}
+}
+.todo-content {
+	&__buttons {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.todo-buttons {
+	&__btn {
+		cursor: pointer;
+
+		width: 32px;
+		height: 32px;
+
+		outline: 0;
+		border: 1px solid #81888a;
+		border-radius: 4px;
+
+		color: white;
+		background-color: transparent;
+
+		transition: all 0.2s ease-in-out;
+
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+		&:hover {
+			background-color: #81888a;
+		}
+	}
+}

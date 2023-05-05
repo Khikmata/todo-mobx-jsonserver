@@ -1,0 +1,52 @@
+.todo-page {
+	margin: 0 auto;
+	padding: 112px 6px;
+
+	max-width: 1280px;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	small {
+		color: rgb(128, 128, 128);
+		margin-bottom: 8px;
+	}
+}
+.auth-button {
+	position: relative;
+	right: 0;
+	border: 1px solid black;
+	border-radius: 4px;
+	text-decoration: none;
+	font-weight: 700;
+	color: black;
+	padding: 8px;
+	margin-bottom: 24px;
+}
+.todo-add__button {
+	width: clamp(100px, 100%, 200px);
+	height: 40px;
+}
+.todo-menu {
+	width: clamp(320px, 100%, 900px);
+	display: flex;
+	justify-content: space-between;
+}
+
+.todo-filters {
+	display: flex;
+	&__button {
+		width: clamp(100px, 100%, 200px);
+		height: 40px;
+		margin-right: 8px;
+		padding: 0px 8px;
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+}
+
+button {
+	margin-bottom: 12px;
+}

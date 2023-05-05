@@ -1,0 +1,57 @@
+.auth-modal {
+	padding: 44px 24px;
+
+	width: clamp(300px, 100%, 600px);
+	height: 360px;
+
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 8px;
+	background-color: rgb(43, 43, 43);
+	p {
+		color: white;
+		font-weight: 700;
+		margin-bottom: 24px;
+	}
+}
+.auth-username,
+.auth-password {
+	margin-bottom: 12px;
+	padding: 0 8px;
+
+	height: 36px;
+	width: 100%;
+
+	outline: 0;
+	border: 1px solid white;
+	border-radius: 8px;
+
+	color: white;
+	background-color: transparent;
+}
+.auth-submit {
+	cursor: pointer;
+	margin-top: 12px;
+	padding: 12px 24px;
+
+	float: right;
+
+	outline: 0;
+	border: 1px solid white;
+	border-radius: 8px;
+
+	color: white;
+	background-color: transparent;
+
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		background-color: rgb(255, 255, 255);
+		color: black;
+	}
+}
+
+label {
+	color: rgb(197, 197, 197);
+	font-size: 16px;
+}
