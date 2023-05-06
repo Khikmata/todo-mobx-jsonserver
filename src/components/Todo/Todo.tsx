@@ -9,7 +9,7 @@ import styles from './Todo.styles.module.scss';
 export const Todo = observer((todo: ITodo) => {
 
 	const handleDone = (todo: ITodo) => {
-		todoStore.updateTodo({ id: todo.id, title: todo.title, done: !todo.done })
+		todoStore.toggleDoneTodo({ id: todo.id, title: todo.title, done: !todo.done })
 	}
 
 	const handleDelete = (id: number) => {

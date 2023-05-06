@@ -12,11 +12,9 @@ import styles from './AuthForm.styles.module.scss'
 export const AuthForm = observer(() => {
 
 	const navigate = useNavigate();
+
 	const [username, setUsername] = useState("")
 	const [password, setPassword] = useState("")
-
-
-
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
@@ -30,7 +28,7 @@ export const AuthForm = observer(() => {
 				body: JSON.stringify({ username, password })
 			});
 			if (!response.ok) {
-				console.log('Произошла ошибка при входе')
+				console.log('Данные неверны')
 			}
 			if (response.ok) {
 				const data = await response.json();
@@ -38,7 +36,7 @@ export const AuthForm = observer(() => {
 				navigate('/', { replace: true });
 			}
 		} catch (error) {
-			console.error(error);
+			alert(error);
 		}
 	}
 
@@ -53,6 +51,7 @@ export const AuthForm = observer(() => {
 						value={username}
 						type='text'
 						className={styles['auth-username']}
+						minLength={3}
 					/>
 				</label>
 				<label>
@@ -63,6 +62,7 @@ export const AuthForm = observer(() => {
 						value={password}
 						type='password'
 						className={styles['auth-password']}
+						minLength={4}
 					/>
 				</label>
 				<button className={styles['auth-submit']}>LOGIN</button>

@@ -12,7 +12,7 @@ class TodoStore {
 		makeObservable(this, {
 			todos: observable,
 			addTodo: action,
-			updateTodo: action,
+			toggleDoneTodo: action,
 			deleteTodo: action,
 			fetchTodos: action,
 		});
@@ -38,8 +38,8 @@ class TodoStore {
 		this.todos.push(addedTodo);
 	}
 
-	async updateTodo(todo: ITodo) {
-		const updatedTodo = await apiReqs.put<ITodo>(`todos/${todo.id}`, todo);
+	async toggleDoneTodo(todo: ITodo) {
+		const updatedTodo = await apiReqs.get<ITodo>(`todos/${todo.id}`);
 		this.todos = this.todos.map(todo => todo.id === updatedTodo.id ? updatedTodo : todo);
 	}
 	async deleteTodo(id: number) {

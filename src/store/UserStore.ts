@@ -17,6 +17,7 @@ class UserStore {
 	}
 
 	login(data: IUser) {
+
 		this.user = data;
 		localStorage.setItem('isAuth', 'true');
 		this.isAuth = true;
