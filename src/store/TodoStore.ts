@@ -39,7 +39,7 @@ class TodoStore {
 	}
 
 	async toggleDoneTodo(todo: ITodo) {
-		const updatedTodo = await apiReqs.get<ITodo>(`todos/${todo.id}`);
+		const updatedTodo = await apiReqs.put<ITodo>(`todos/${todo.id}`, todo);
 		this.todos = this.todos.map(todo => todo.id === updatedTodo.id ? updatedTodo : todo);
 	}
 	async deleteTodo(id: number) {
