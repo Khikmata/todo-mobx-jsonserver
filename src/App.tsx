@@ -8,7 +8,6 @@ function App() {
 
   return (
 
-    //т.к в тз указывался редирект, я использовал реакт роутер дом для этого
 
     <main className={styles['']}>
       <Routes>

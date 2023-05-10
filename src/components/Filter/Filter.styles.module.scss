@@ -1,0 +1,12 @@
+.todo-filters {
+	display: flex;
+	&__button {
+		width: clamp(100px, 100%, 200px);
+		height: 40px;
+		margin-right: 8px;
+		padding: 0px 8px;
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+}
