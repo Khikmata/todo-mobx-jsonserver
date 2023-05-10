@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import todoStore from '../../store/TodoStore';
-import { statusTypes } from '../../types/types';
-import styles from './TodoMenu.styles.module.scss';
+import React from 'react';
 import { Filter } from '../Filter';
+import styles from './TodoMenu.styles.module.scss';
 
 interface TodoMenuProps {
 	setOpenModal: React.Dispatch<React.SetStateAction<boolean>>
